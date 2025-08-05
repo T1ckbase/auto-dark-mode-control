@@ -1,0 +1,8 @@
+{
+  "typeAcquisition": {
+    "include": ["chrome"]
+  },
+  "compilerOptions": {
+    "target": "ESNext"
+  }
+}

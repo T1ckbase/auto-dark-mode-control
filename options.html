@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Auto Dark Mode Control</title>
+    <style>
+      * {
+        font-family: monospace;
+      }
+
+      body {
+        font-size: 1.5em;
+      }
+
+      textarea {
+        field-sizing: content;
+        width: max(50%, 50ch);
+        font-size: 0.8em;
+      }
+
+      #error {
+        color: red;
+      }
+    </style>
+    <script type="module" src="js/options.js"></script>
+  </head>
+  <body>
+    <h1>Auto Dark Mode Control</h1>
+    <div>urls (<a href="https://developer.chrome.com/docs/extensions/develop/concepts/match-patterns">match-patterns</a>):</div>
+    <textarea id="urls" placeholder="https://stackoverflow.com/*"></textarea>
+    <div id="error"></div>
+  </body>
+</html>

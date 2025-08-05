@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "manifest_version": 3,
+  "name": "Auto Dark Mode Control",
+  "description": "Control auto dark mode for websites.",
+  "version": "1.0",
+  "icons": {
+    "16": "img/moon-16.png",
+    "32": "img/moon-32.png",
+    "48": "img/moon-48.png",
+    "128": "img/moon-128.png"
+  },
+  "permissions": ["tabs", "activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  }
+}
