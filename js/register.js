@@ -12,12 +12,12 @@ export async function register() {
   /** @type {chrome.scripting.RegisteredContentScript} */
   const contentScript = {
     id: 'css-injection',
-    matches: ['<all_urls>'],
+    matches: excludeMatches, // ['<all_urls>'],
     css: ['css/opt-out-dark-theme.css'],
     runAt: 'document_start',
     allFrames: true,
     world: 'MAIN',
-    excludeMatches, // dark mode enabled
+    // excludeMatches, // dark mode enabled
   };
 
   return await chrome.scripting.registerContentScripts([contentScript]).catch((e) => e);
