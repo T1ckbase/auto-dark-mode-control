@@ -5,7 +5,7 @@ const urls = (await chrome.storage.local.get('urls'))['urls'];
 
 /** @type {HTMLTextAreaElement} */
 const urlsInput = document.querySelector('#urls');
-urlsInput.value = urls;
+urlsInput.value = urls ?? '';
 
 /** @type {HTMLDivElement} */
 const errorDiv = document.querySelector('#error');
